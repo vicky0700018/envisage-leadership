@@ -7,7 +7,7 @@ import { ArticleCard, fmtDate } from "@/components/site/ArticleCard";
 import { useDB } from "@/lib/store";
 import { createDefaults } from "@/lib/data";
 
-export const Route = createFileRoute("/insights/")({
+export const Route = createFileRoute("/insights/$slug")({
   head: ({ params }) => {
     const a = createDefaults().articles.find((x) => x.slug === params.slug);
     const title = a ? `${a.title} — Envisage Insights` : "Article — Envisage Insights";

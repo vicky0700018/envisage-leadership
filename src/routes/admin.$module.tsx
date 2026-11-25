@@ -10,7 +10,7 @@ import { newId, remove, upsert, useDB } from "@/lib/store";
 
 type Row = { id: string; status: string } & Record<string, string>;
 
-export const Route = createFileRoute("/admin/")({
+export const Route = createFileRoute("/admin/$module")({
   validateSearch: (s: Record<string, unknown>): { new?: boolean } => (s["new"] ? { new: true } : {}),
   component: ModulePage,
 });

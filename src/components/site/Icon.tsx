@@ -49,7 +49,7 @@ export function Icon({ name, className = "h-5 w-5" }: { name: string; className?
     );
   return (
     <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <path d={P[name] ?? P.spark} />
+      <path d={P[name] ?? P["spark"]} />
     </svg>
   );
 }
